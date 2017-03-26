@@ -71,7 +71,7 @@ namespace BlueDog
             return data;
         }
 
-        public static async Task<BlueDogResult> ValidateToken( string jwt, IDataProvider dataProvider, ServerConfiguration configuration, out User user )
+        public static async Task<BlueDogResult> ValidateToken( string jwt, IDataProvider dataProvider, ServerConfiguration configuration )
         {
             var secret = configuration.JwtSecretKey;
 
@@ -82,11 +82,6 @@ namespace BlueDog
                 return BlueDogResult.ExpiredToken;
             }
 
-            user = await dataProvider.GetUserById(token.userid);
-
-            // was there a user
-            if (user == null)
-                return BlueDogResult.NoSuchUser;
 
             return BlueDogResult.Ok;
         }

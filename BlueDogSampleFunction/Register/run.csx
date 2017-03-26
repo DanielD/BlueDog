@@ -1,6 +1,5 @@
 ﻿#r "..\bin\BlueDog.dll"
 
-
 using System.Net;
 using System.Collections.Generic;
 using BlueDog;
