@@ -1,0 +1,9 @@
+packages/
+eStorableCore/obj/
+eStorablesTest/bin/
+eStorablesTest/obj/
+.vs/
+BlueDogAuthTest/bin/
+BlueDog/obj/
+BlueDogAuthTest/obj/
+BlueDogSampleFunction/bin/

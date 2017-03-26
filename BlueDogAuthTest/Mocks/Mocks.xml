@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Mocks>
+
+  <NameTransformations>
+    <Transformation>
+      <Pattern><![CDATA[I(?<name>[A-Z].*)]]></Pattern>
+      <Replacement>${name}</Replacement>
+    </Transformation>
+    <Transformation>
+      <Pattern><![CDATA[(?<name>.+)]]></Pattern>
+      <Replacement>${name}Mock</Replacement>
+    </Transformation>
+  </NameTransformations>
+
+  <Interfaces>
+    <Include>
+      <Pattern>BlueDog.DataProvider.*</Pattern>
+    </Include>
+  </Interfaces>
+
+</Mocks>
